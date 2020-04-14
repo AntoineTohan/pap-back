@@ -59,7 +59,7 @@ In the Body formated in "Raw" -> "Json" :
 
 ```
 { 
-	"firstName":"antoine",
+    "firstName":"antoine",
     "lastName": "durand",
     "age": 21,
     "email": "yolo@yolo.yolo",
