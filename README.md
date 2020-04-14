@@ -47,17 +47,24 @@ $ yarn start:dev
 $ yarn start:prod
 ```
 
-## Test
+## Use the app
 
-```bash
-# unit tests
-$ yarn test
+For get users use postman or browser : 
+Request : ```http://localhost:3000/users``` in GET mehtod.
 
-# e2e tests
-$ yarn test:e2e
+For create users use postman : 
+Request : ```http://localhost:3000/users``` in POST mehtod.
 
-# test coverage
-$ yarn test:cov
+In the Body formated in "Raw" -> "Json" : 
+
+```
+{ 
+	"firstName":"antoine",
+    "lastName": "durand",
+    "age": 21,
+    "email": "yolo@yolo.yolo",
+    "password": "password"
+}
 ```
 
 ## Support
