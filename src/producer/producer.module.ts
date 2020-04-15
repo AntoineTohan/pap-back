@@ -8,5 +8,6 @@ import { ProducerSchema } from './schemas/producer.schema'
   imports: [MongooseModule.forFeature([{ name: 'Producer', schema: ProducerSchema }])],
   controllers: [ProducerController],
   providers: [ProducerService],
+  exports: [ProducerService],
 })
 export class ProducerModule {}

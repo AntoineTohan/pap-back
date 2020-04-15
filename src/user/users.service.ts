@@ -28,4 +28,8 @@ export class UsersService {
   async updateOne(id: string, createUserDto: CreateUserDto): Promise<User> {
     return this.userModel.updateOne({_id: id}, createUserDto).exec();
   }
+  
+  async findOneByEmail(email: string): Promise<User> {
+    return this.userModel.findOne({email: email}).exec();
+  }
 }

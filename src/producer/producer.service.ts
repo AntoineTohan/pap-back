@@ -28,4 +28,8 @@ export class ProducerService {
   async findOne(id: string): Promise<Producer> {
     return this.producerModel.findById(id).exec();
   }
+
+  async findOneByEmail(email: string): Promise<Producer> {
+    return this.producerModel.findOne({email: email}).exec();
+  }
 }
