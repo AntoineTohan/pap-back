@@ -16,4 +16,8 @@ export class DeliveryService {
   async findAll(): Promise<Delivery[]> {
     return this.deliveryModel.find().exec();
   }
+
+  async findOne(id: string): Promise<Delivery> {
+    return this.deliveryModel.findById(id).exec();
+  }
 }
