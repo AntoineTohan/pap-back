@@ -16,4 +16,8 @@ export class ProducerService {
   async findAll(): Promise<Producer[]> {
     return this.producerModel.find().exec();
   }
+
+  async findOne(id: string): Promise<Producer> {
+    return this.producerModel.findById(id).exec();
+  }
 }

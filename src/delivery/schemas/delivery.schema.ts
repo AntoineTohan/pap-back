@@ -7,4 +7,10 @@ export const DeliverySchema = new mongoose.Schema({
   status: String,
   createdAt: String,
   updatedAt: String,
+  deliveryName: String,
+  producerName: String,
+  clientPhoneNumber: String,
+  producerPhoneNumber: String,
+  isDelivered: { type: Boolean, default: false },
+  isPending: { type: Boolean, default: true }
 });
