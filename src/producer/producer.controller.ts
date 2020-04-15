@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
 import { CreateProducerDto } from './dto/create-producer.dto';
 import { ProducerService } from './producer.service';
 import { Producer } from './interfaces/producer.interface';
@@ -10,6 +10,16 @@ export class ProducerController {
   @Post()
   async create(@Body() createProducerDto: CreateProducerDto) {
     await this.producerService.create(createProducerDto);
+  }
+
+  @Delete(':id')
+  async removeOne(@Param('id') id: string) {
+    return this.producerService.deleteOne(id);
+  }
+
+  @Put(':id')
+  async updateOne(@Param('id') id: string, @Body() createProducerDto: CreateProducerDto): Promise<Producer> {
+    return this.producerService.updateOne(id, createProducerDto);
   }
 
   @Get()

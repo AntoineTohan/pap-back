@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { CreateDeliveryDto } from './dto/create-delivery.dto';
 import { DeliveryService } from './delivery.service';
 import { Delivery } from './interfaces/delivery.interface';
@@ -20,5 +20,15 @@ export class DeliveryController {
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<Delivery> {
     return this.deliveryService.findOne(id);
+  }
+
+  @Delete(':id')
+  async removeOne(@Param('id') id: string) {
+    return this.deliveryService.deleteOne(id);
+  }
+
+  @Put(':id')
+  async updateOne(@Param('id') id: string, @Body() createDeliveryDto: CreateDeliveryDto): Promise<Delivery> {
+    return this.deliveryService.updateOne(id, createDeliveryDto);
   }
 }
