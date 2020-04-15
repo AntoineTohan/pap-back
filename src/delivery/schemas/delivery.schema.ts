@@ -4,7 +4,6 @@ export const DeliverySchema = new mongoose.Schema({
   deliveryAddress: String,
   collectionAddress: String,
   weight: String,
-  status: String,
   createdAt: String,
   updatedAt: String,
   deliveryName: String,
@@ -12,5 +11,5 @@ export const DeliverySchema = new mongoose.Schema({
   clientPhoneNumber: String,
   producerPhoneNumber: String,
   isDelivered: { type: Boolean, default: false },
-  isPending: { type: Boolean, default: true }
+  isPending: { type: Boolean, default: true },
 });
