@@ -20,4 +20,12 @@ export class UsersService {
   async findOne(id: string): Promise<User> {
     return this.userModel.findById(id).exec();
   }
+
+  async deleteOne(id: string) {
+    return this.userModel.deleteOne({_id: id});
+  }
+
+  async updateOne(id: string, createUserDto: CreateUserDto): Promise<User> {
+    return this.userModel.updateOne({_id: id}, createUserDto).exec();
+  }
 }

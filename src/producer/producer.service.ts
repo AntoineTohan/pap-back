@@ -17,6 +17,14 @@ export class ProducerService {
     return this.producerModel.find().exec();
   }
 
+  async updateOne(id: string, createProducerDto: CreateProducerDto): Promise<Producer> {
+    return this.producerModel.updateOne({_id: id}, createProducerDto).exec();
+  }
+
+  async deleteOne(id: string) {
+    return this.producerModel.deleteOne({_id: id});
+  }
+
   async findOne(id: string): Promise<Producer> {
     return this.producerModel.findById(id).exec();
   }
