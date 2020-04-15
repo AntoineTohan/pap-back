@@ -14,7 +14,6 @@ export class UsersController {
 
   @Get()
   async findAll(): Promise<User[]> {
-      console.log("pute");
-    return this.usersService.findAll();
+      return this.usersService.findAll();
   }
 }
