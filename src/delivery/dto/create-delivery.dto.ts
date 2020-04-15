@@ -1,8 +1,8 @@
 export class CreateDeliveryDto {
-  readonly idDelivery: number;
-  readonly address: string;
+  readonly deliveryAddress: string;
+  readonly collectionAddress: string;
   readonly weight: string;
-  readonly status: boolean;
-  readonly createdAt: Date;
-  readonly updatedAt: Date;
+  readonly status: string;
+  readonly createdAt: string;
+  readonly updatedAt: string;
 }
