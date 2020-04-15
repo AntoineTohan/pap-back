@@ -3,7 +3,7 @@ import { CreateProducerDto } from './dto/create-producer.dto';
 import { ProducerService } from './producer.service';
 import { Producer } from './interfaces/producer.interface';
 
-@Controller('producer')
+@Controller('producers')
 export class ProducerController {
   constructor(private readonly producerService: ProducerService) {}
 
