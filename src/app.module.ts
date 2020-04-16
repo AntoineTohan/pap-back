@@ -4,7 +4,6 @@ import { DeliveryModule } from './delivery/delivery.module';
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
-import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -14,6 +13,5 @@ import { AppController } from './app.controller';
     DeliveryModule,
     AuthModule,
   ],
-  controllers: [AppController],
 })
 export class AppModule {}

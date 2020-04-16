@@ -8,9 +8,14 @@ import { CreateUserDto } from './dto/create-user.dto';
 export class UsersService {
   constructor(@InjectModel('User') private userModel: Model<User>) {}
 
-  async create(createUsersDto: CreateUserDto): Promise<User> {
+  async create(createUsersDto: CreateUserDto): Promise<{result: string, message: string}> {
     const createdUser = new this.userModel(createUsersDto);
-    return createdUser.save();
+    const alreadyExist = await this.userModel.findOne({email: createUsersDto.email}).exec();
+    if(alreadyExist) {
+      return { result: 'error', message: 'Already exist in database.' }
+    }
+    createdUser.save();
+    return { result: 'ok', message: 'Producer inserted' }
   }
 
   async findAll(): Promise<User[]> {

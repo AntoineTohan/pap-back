@@ -8,9 +8,14 @@ import { CreateProducerDto } from './dto/create-producer.dto';
 export class ProducerService {
   constructor(@InjectModel('Producer') private producerModel: Model<Producer>) {}
 
-  async create(createProducerDto: CreateProducerDto): Promise<Producer> {
+  async create(createProducerDto: CreateProducerDto): Promise<{result: string, message: string}> {
     const createdProducer = new this.producerModel(createProducerDto);
-    return createdProducer.save();
+    const alreadyExist = await this.producerModel.findOne({email: createProducerDto.email}).exec();
+    if(alreadyExist) {
+      return { result: 'error', message: 'Already exist in database.' }
+    }
+    createdProducer.save();
+    return { result: 'ok', message: 'Producer inserted' }
   }
 
   async findAll(): Promise<Producer[]> {
