@@ -10,6 +10,7 @@ export class DeliveryController {
   @Post()
   async create(@Body() createDeliveryDto: CreateDeliveryDto) {
     await this.deliveryService.create(createDeliveryDto);
+    return { result: 'ok', message: 'Delivery inserted' }
   }
 
   @Get()

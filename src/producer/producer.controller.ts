@@ -9,7 +9,7 @@ export class ProducerController {
 
   @Post()
   async create(@Body() createProducerDto: CreateProducerDto) {
-    await this.producerService.create(createProducerDto);
+    return await this.producerService.create(createProducerDto);
   }
 
   @Delete(':id')
