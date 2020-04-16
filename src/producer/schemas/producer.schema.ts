@@ -3,7 +3,7 @@ import * as mongoose from 'mongoose';
 export const ProducerSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
-  age: Number,
+  phoneNumber: String,
   address: String,
   companyName: String,
   city: String,
