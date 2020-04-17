@@ -37,7 +37,7 @@ Notre application permet aux producteurs désirant vendre et livrer ses clients 
 
 Lien vers la [Documentation technique](../blob/docs-develop/docs/INDEX)
 
-Lien vers la [Documentation SwaggerAPI](../blob/docs-develop/docs/INDEX)
+Lien vers la [Documentation SwaggerAPI](../blob/docs-develop/docs/TECHDOC)
 
 ## License
 
