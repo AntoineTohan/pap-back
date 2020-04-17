@@ -13,7 +13,7 @@ Notre application permet aux producteurs désirant vendre et livrer ses clients 
 
 ## 1. Solution technique
 
-<p align="center"><a href="http://nodejs.com/" target="blank"><img src="https://nodejs.org/static/images/logo.svg" width="160" alt="Node Logo"/></a></p>
+<p align="center"><a href="http://nodejs.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1024px-Node.js_logo.svg.png" width="160" alt="Node Logo"/></a></p>
 
 **NodeJS** est un environnement d'exécution serveur très léger et performant.
 
@@ -30,7 +30,7 @@ dîte "server-side" se voulant efficiente et scalable.
 d'assigner un type à nos variables, de déclarer des interfaces, des classes, etc. 
 
 * <a href="http://nestjs.com/" target="blank">NestJS</a> est simple d'utilisation: l'emploie de décorateur permet de rapidement cibler la fonction _CRUD_ associée (_GET/POST/PUT/DELETE_)
- 
+
 ```javascript
 @Get(':id')
 async findOne(@Param('id') id: string): Promise<Deliverer> {
@@ -54,7 +54,7 @@ C'est donc une base de données non relationnelle, avce de multiples documents p
 
 Exemple de création de modélisation d'un objet _MongoDB_ :
 ```javascript
-const BlogPost = new Schema({
+export const BlogPost = new Schema({
     author    : ObjectId
   , title     : String
   , body      : String
@@ -66,8 +66,6 @@ const BlogPost = new Schema({
     , favs  : Number
   }
 });
-
-const Post = mongoose.model('BlogPost', BlogPost);
 ``` 
 
 Une fois déclarer ce model est utilisable afin d'insérer des données en base.
@@ -75,5 +73,46 @@ Une fois déclarer ce model est utilisable afin d'insérer des données en base.
 
 
 ## 2. Mise en route
+
+## Installation
+
+```bash
+$ yarn
+```
+
+## Démarrer l'application
+
+```bash
+# development
+$ yarn start
+
+# watch mode
+$ yarn start:dev
+
+# production mode
+$ yarn start:prod
+```
+
+## Utiliser l'application
+
+* Pour récupérer un utilisateur utiliser _PostMan_ ou bien directement dans votre navigateur :
+
+Requête : ```http://localhost:3000/users``` (GET)
+
+* Pour créer un nouvel utilisateur, utiliser _PostMan_ :
+
+Requête : ```http://localhost:3000/users``` (POST)
+
+Dans la section **Body** de _PostMan_ en format **RAW/JSON** : 
+
+```
+{ 
+    "firstName":"antoine",
+    "lastName": "durand",
+    "age": 21,
+    "email": "yolo@yolo.yolo",
+    "password": "password"
+}
+```
 
 ## 3. FAQ
