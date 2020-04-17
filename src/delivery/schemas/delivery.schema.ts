@@ -1,15 +1,14 @@
 import * as mongoose from 'mongoose';
 
 export const DeliverySchema = new mongoose.Schema({
-  deliveryAddress: String,
   collectionAddress: String,
   weight: String,
   createdAt: String,
   updatedAt: String,
-  deliveryName: String,
-  producerName: String,
+  deliveryAddress: String,
   clientPhoneNumber: String,
-  producerPhoneNumber: String,
+  producer: Object,
+  deliverer: Object,
   isDelivered: { type: Boolean, default: false },
   isPending: { type: Boolean, default: true },
 });
