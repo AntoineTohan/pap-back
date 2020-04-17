@@ -117,4 +117,4 @@ Dans la section **Body** de _PostMan_ en format **RAW/JSON** :
 
 ## 3. FAQ
 
-* [Retour au sommaire](../blob/master/index)
+* [Retour au sommaire](../blob/master/INDEX.md)
