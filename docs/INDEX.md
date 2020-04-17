@@ -105,7 +105,7 @@ Requête : ```http://localhost:3000/users``` (POST)
 
 Dans la section **Body** de _PostMan_ en format **RAW/JSON** : 
 
-```
+```json
 { 
     "firstName":"antoine",
     "lastName": "durand",
