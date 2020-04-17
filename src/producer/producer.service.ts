@@ -1,5 +1,5 @@
+import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { Model } from 'mongoose';
-import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Producer } from './interfaces/producer.interface';
 import { CreateProducerDto } from './dto/create-producer.dto';
@@ -12,7 +12,7 @@ export class ProducerService {
     const createdProducer = new this.producerModel(createProducerDto);
     const alreadyExist = await this.producerModel.findOne({email: createProducerDto.email}).exec();
     if(alreadyExist) {
-      return { result: 'error', message: 'Already exist in database.' }
+      throw new HttpException('Already exist in database.', HttpStatus.FORBIDDEN);
     }
     createdProducer.save();
     return { result: 'ok', message: 'Producer inserted' }

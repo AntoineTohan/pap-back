@@ -1,5 +1,5 @@
+import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { Model } from 'mongoose';
-import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Delivery } from './interfaces/delivery.interface';
 import { CreateDeliveryDto } from './dto/create-delivery.dto';
@@ -14,7 +14,7 @@ export class DeliveryService {
     const producer = await this.producerService.findOne(createDeliveryDto.idProducer);
     const deliverer = await this.deliverersService.findOne(createDeliveryDto.idDeliverer)
     if(!producer || !deliverer) {
-      return { result: 'error', message: 'Can\'t find producer or delivered given.' }
+      throw new HttpException('Can\'t find producer or deliverer given.', HttpStatus.FORBIDDEN);
     }
     const objectDelivery = {
       collectionAddress: createDeliveryDto.collectionAddress,

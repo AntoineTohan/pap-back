@@ -1,5 +1,5 @@
 import { Model } from 'mongoose';
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Deliverer } from './interfaces/deliverer.interface';
 import { CreateDelivererDto } from './dto/create-deliverer.dto';
@@ -12,7 +12,7 @@ export class DeliverersService {
     const createdDeliverer = new this.delivererModel(createDelivererDto);
     const alreadyExist = await this.delivererModel.findOne({email: createDelivererDto.email}).exec();
     if(alreadyExist) {
-      return { result: 'error', message: 'Already exist in database.' }
+      throw new HttpException('Already exist in database.', HttpStatus.FORBIDDEN);
     }
     createdDeliverer.save();
     return { result: 'ok', message: 'Deliverers inserted' }
