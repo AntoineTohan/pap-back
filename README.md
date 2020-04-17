@@ -26,57 +26,19 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+L'application "**Producteur à Particulier**" permet la mise en relation entres producteurs et livreurs afin de pouvoir délivrer les commandes aux clients.
 
-## Installation
+L'objectif est de faciliter le recours aux produits locaux, notamment dans les villes : seulement les producteurs n'ont pas toujours les moyens (financiers, logistiques, etc..)
+pour mettre en place un système de livraison aux clients particuliers.
 
-```bash
-$ yarn
-```
+Notre application permet aux producteurs désirant vendre et livrer ses clients particuliers d'être mis en relation avec un livreur disponible.
 
-## Running the app
+## Documentations
 
-```bash
-# development
-$ yarn start
+Lien vers la [Documentation technique](../blob/docs-develop/docs/INDEX)
 
-# watch mode
-$ yarn start:dev
-
-# production mode
-$ yarn start:prod
-```
-
-## Use the app
-
-For get users use postman or browser : 
-Request : ```http://localhost:3000/users``` in GET mehtod.
-
-For create users use postman : 
-Request : ```http://localhost:3000/users``` in POST mehtod.
-
-In the Body formated in "Raw" -> "Json" : 
-
-```
-{ 
-    "firstName":"antoine",
-    "lastName": "durand",
-    "age": 21,
-    "email": "yolo@yolo.yolo",
-    "password": "password"
-}
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Lien vers la [Documentation SwaggerAPI](../blob/docs-develop/docs/INDEX)
 
 ## License
 
-  Nest is [MIT licensed](LICENSE).
+Producteur à Particulier est sous licence [MIT](LICENSE).
