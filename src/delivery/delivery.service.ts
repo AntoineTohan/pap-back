@@ -12,9 +12,8 @@ export class DeliveryService {
 
   async create(createDeliveryDto: CreateDeliveryDto): Promise<{result: string, message: string}> {
     const producer = await this.producerService.findOne(createDeliveryDto.idProducer);
-    const deliverer = await this.deliverersService.findOne(createDeliveryDto.idDeliverer)
-    if(!producer || !deliverer) {
-      throw new HttpException('Can\'t find producer or deliverer given.', HttpStatus.FORBIDDEN);
+    if(!producer) {
+      throw new HttpException('Can\'t find producer given.', HttpStatus.FORBIDDEN);
     }
     const objectDelivery = {
       collectionAddress: createDeliveryDto.collectionAddress,
@@ -24,7 +23,6 @@ export class DeliveryService {
       deliveryAddress: createDeliveryDto.deliveryAddress,
       clientPhoneNumber: createDeliveryDto.clientPhoneNumber,
       producer: producer,
-      deliverer: deliverer,
       isDelivered: false,
       isPending: true
      }
