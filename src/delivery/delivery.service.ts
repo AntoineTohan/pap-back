@@ -22,6 +22,7 @@ export class DeliveryService {
       updatedAt: new Date(),
       deliveryAddress: createDeliveryDto.deliveryAddress,
       clientPhoneNumber: createDeliveryDto.clientPhoneNumber,
+      clientName: createDeliveryDto.clientName,
       producer: producer,
       isDelivered: false,
       isPending: true
