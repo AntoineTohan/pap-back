@@ -74,11 +74,90 @@ Une fois déclarer ce model est utilisable afin d'insérer des données en base.
 
 ## 2. Mise en route
 
+### Pré-requis
+
+* Installattion de <a href="https://nodejs.org/en/download/" target="blank">NodeJS</a> contenant <a href="https://www.npmjs.com/package/mongodb" target="blank">NPM</a>
+* Installation du gestionnaire de dépendances : <a href="https://yarnpjkg.com/" target="blank">Yarn</a>
+  * Via <a href="https://www.npmjs.com/package/yarn" target="blank">NPM</a>
+   * ```bash
+      $ npm install -g yarn
+      ```
+* Installation de <a href="http://mongodb.com/" target="blank">MongoDB</a>
+
+  * Via <a href="https://www.npmjs.com/package/mongodb" target="blank">NPM</a>
+  * ```bash
+    $ npm install mongodb
+    ```
+  * Via <a href="http://docker.com/" target="blank">Docker</a>
+   * ```bash
+      $ docker pull mongo:latest
+      ```
+
 ## Installation
+
+Dans votre terminal :
 
 ```bash
 $ yarn
 ```
+
+Cela va initialiser le projet et installer les dépendances nécessaires au projet.
+
+## Configuration de MongoDB
+
+Une fois le container docker récupérer via :
+
+```bash
+$ docker pull mongo:latest
+```
+
+Il faut démarrer le container, pour cela :
+
+* Démarrer le container correspondant à mongoDB :
+
+```bash
+$ mkdir ~/data
+$ sudo docker run -d -p 27017:27017 -v ~/data:/data/db mongo
+```
+
+* Vérification que le container a bien été créer :
+```bash
+$ docker ps -a
+
+> CONTAINER ID | IMAGE | COMMAND                | CREATED    | STATUS
+  d75f0d303e91 | mongo | "docker-entrypoint.s…" | 3 days ago | Running
+```
+
+* Accéder a mongo via docker :
+
+```bash
+$ docker exec -it mongo bash
+$ mongo
+```
+
+* Créer la base de données :
+
+```bash
+> use pap-back
+```
+
+* Vérification de la base actuellement utilisée :
+
+```bash
+> db
+pap-back
+```
+
+* Lister toutes les base de données mongoDB :
+
+```bash
+>show dbs
+local     0.78125GB
+test      0.23012GB
+pap-back
+```
+
+<i>La base "pap-back" n'est pas présente, c'est tout à fait normal il faut effectuer un premier insert dans la base.</i>
 
 ## Démarrer l'application
 
@@ -105,7 +184,7 @@ Requête : ```http://localhost:3000/users``` (POST)
 
 Dans la section **Body** de _PostMan_ en format **RAW/JSON** : 
 
-```json
+```json5
 { 
     "firstName":"antoine",
     "lastName": "durand",
@@ -115,6 +194,6 @@ Dans la section **Body** de _PostMan_ en format **RAW/JSON** :
 }
 ```
 
-## 3. FAQ
+#### [Retour au sommaire](../../master/README.md)
 
-* [Retour au sommaire](../../master/README.md)
+
