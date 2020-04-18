@@ -7,6 +7,7 @@ export const DeliverySchema = new mongoose.Schema({
   updatedAt: String,
   deliveryAddress: String,
   clientPhoneNumber: String,
+  clientName: String,
   producer: Object,
   deliverer: Object,
   isDelivered: { type: Boolean, default: false },
