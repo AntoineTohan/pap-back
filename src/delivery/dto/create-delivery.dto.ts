@@ -3,6 +3,7 @@ export class CreateDeliveryDto {
   readonly weight: string;
   readonly deliveryAddress: string;
   readonly clientPhoneNumber: string;
+  readonly clientName: string;
   readonly idProducer: string;
   readonly idDeliverer: string;
   readonly isDelivered: { type: boolean, default: false };

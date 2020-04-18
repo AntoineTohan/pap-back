@@ -9,6 +9,7 @@ export interface Delivery extends Document {
   readonly updatedAt: string;
   readonly deliveryAddress: string;
   readonly clientPhoneNumber: string;
+  readonly clientName: string;
   readonly producer: Producer;
   readonly deliverer: Deliverer;
   readonly isDelivered: { type: boolean, default: false };
