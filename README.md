@@ -26,8 +26,8 @@ jeter son stock d'invendus.
    
 Cette application est gratuite et solidaire, elle répond à un besoin exprimés au cours des dernières semaines avec la crise sanitaire.
 
-**Nb :** Cette application sert à mettre uniquement en relation des producteurs et des livreurs et n'a vocation
-a être utiliser par les clients des producteurs.
+**Nb :** Cette application sert à mettre uniquement en relation des producteurs et des livreurs et n'a pas vocation
+a être utilisée par les clients des producteurs.
 
 ## Problématique Covid-19
 
