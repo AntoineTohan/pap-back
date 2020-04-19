@@ -122,7 +122,7 @@ $ sudo docker run -d -p 27017:27017 -v ~/data:/data/db mongo
 
 * Vérification que le container a bien été créer :
 ```bash
-$ docker ps -a
+$ docker ps
 
 > CONTAINER ID | IMAGE | COMMAND                | CREATED    | STATUS
   d75f0d303e91 | mongo | "docker-entrypoint.s…" | 3 days ago | Running
@@ -131,7 +131,7 @@ $ docker ps -a
 * Accéder a mongo via docker :
 
 ```bash
-$ docker exec -it mongo bash
+$ docker exec -it <CONTAINER ID> bash
 $ mongo
 ```
 
