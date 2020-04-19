@@ -13,7 +13,7 @@ Notre application permet aux producteurs désirant vendre et livrer ses clients 
 
 ## Problématique Covid-19
 
-Au regard de la situation sanitaire actuelle, cette application a été pensé dans un but de solidarité,
+Au regard de la situation sanitaire actuelle, cette application a été pensée dans un but de solidarité,
 et d'entraîde envers les personnes les plus fragiles. Mais également, soutenir la filière agricole qui ne peut plus vendre sa production.
 
 C'est donc un avantage double : favoriser le recours aux produits locaux et permettre aux personnes les plus fragilisés de bénéficier de légumes frais
