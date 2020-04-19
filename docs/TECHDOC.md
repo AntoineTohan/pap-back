@@ -138,20 +138,20 @@ $ mongo
 * Créer la base de données :
 
 ```bash
-> use pap-back
+> use pap-back;
 ```
 
 * Vérification de la base actuellement utilisée :
 
 ```bash
-> db
+> db;
 pap-back
 ```
 
 * Lister toutes les base de données mongoDB :
 
 ```bash
->show dbs
+>show dbs;
 local     0.78125GB
 test      0.23012GB
 ```
