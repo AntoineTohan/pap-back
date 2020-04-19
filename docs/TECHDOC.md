@@ -76,7 +76,7 @@ Une fois déclarer ce model est utilisable afin d'insérer des données en base.
 
 ### Pré-requis
 
-* Installattion de <a href="https://nodejs.org/en/download/" target="blank">NodeJS</a> contenant <a href="https://www.npmjs.com/package/mongodb" target="blank">NPM</a>
+* Installation de <a href="https://nodejs.org/en/download/" target="blank">NodeJS</a> contenant <a href="https://www.npmjs.com/package/mongodb" target="blank">NPM</a>
 * Installation du gestionnaire de dépendances : <a href="https://yarnpjkg.com/" target="blank">Yarn</a>
   * Via <a href="https://www.npmjs.com/package/yarn" target="blank">NPM</a>
    * ```bash
@@ -154,7 +154,6 @@ pap-back
 >show dbs
 local     0.78125GB
 test      0.23012GB
-pap-back
 ```
 
 <i>La base "pap-back" n'est pas présente, c'est tout à fait normal il faut effectuer un premier insert dans la base.</i>
