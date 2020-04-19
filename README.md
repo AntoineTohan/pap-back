@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="" target="blank"><img src="../docs-develop/docs/res/pap_logo.png" width="320" alt="Pap Logo" /></a>
+  <a href="" target="blank"><img src="../master/docs/res/pap_logo.png" width="320" alt="Pap Logo" /></a>
 </p>
   
 ## Description
@@ -13,9 +13,7 @@ Notre application permet aux producteurs désirant vendre et livrer ses clients 
 
 ## Documentations
 
-Lien vers la [Documentation technique](../docs-develop/docs/TECHDOC.md)
-
-Lien vers la [Documentation SwaggerAPI](../docs-develop/docs/TECHDOC.md)
+Lien vers la [Documentation technique](../master/docs/TECHDOC.md)
 
 ## License
 
