@@ -9,8 +9,6 @@ pour mettre en place un système de livraison aux clients particuliers.
 
 Notre application permet aux producteurs désirant vendre et livrer ses clients particuliers d'être mis en relation avec un livreur disponible.
 
-
-
 ## 1. Solution technique
 
 <p align="center"><a href="http://nodejs.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1024px-Node.js_logo.svg.png" width="160" alt="Node Logo"/></a></p>
@@ -69,6 +67,19 @@ export const BlogPost = new Schema({
 ``` 
 
 Une fois déclarer ce model est utilisable afin d'insérer des données en base.
+
+* ### Sécurité
+
+Au sein de l'application "PàP", nous avons utiliser <a href="https://jwt.io" target="blank">JSON Web Token (JWT)</a> ainsi
+que <a href="https://www.npmjs.com/package/bcrypt" target="blank">bCrypt</a> pour sécuriser l'envoie et la réception des données de nos futurs utilisateurs.
+
+* **JWT** : Json Web Token permet de sécuriser l'échange de jetons (ou "token") entre plusieurs parties. 
+Ces _jetons_ permetttent de sécuriser les échanges au sein même de l'application.
+
+* **bCrypt** : sous la forme d'un paquet NPM, cet outils permet de générer via un algorithme un hash à partir d'un password afin 
+d'offusquer celui-ci. Le mot de passe n'est jamais transmis en clair et n'est pas accessible par un tiers.
+
+* **HTTPS** : Toutes les requêtes, redirection de page transitent via le protocole _HTTPS_
 
 
 
