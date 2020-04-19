@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { DeliverersModule } from './deliverer/deliverers.module';
+import { AppController } from './app.controller';
 import { ProducerModule } from './producer/producer.module';
 import { DeliveryModule } from './delivery/delivery.module';
 import { AuthModule } from './auth/auth.module';
@@ -13,5 +14,6 @@ import { AuthModule } from './auth/auth.module';
     DeliveryModule,
     AuthModule,
   ],
+  controllers: [AppController]
 })
 export class AppModule {}
