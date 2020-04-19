@@ -2,6 +2,9 @@
 /dist
 /node_modules
 
+#secet keys
+/src/auth/constant.ts
+
 # Logs
 logs
 *.log
