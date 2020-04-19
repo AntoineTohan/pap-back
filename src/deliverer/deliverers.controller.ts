@@ -8,7 +8,6 @@ import { Deliverer } from './interfaces/deliverer.interface';
 export class DeliverersController {
   constructor(private readonly deliverersService: DeliverersService) {}
 
-  @UseGuards(JwtAuthGuard)
   @Post()
   async create(@Body() createDelivererDto: CreateDelivererDto) {
     return this.deliverersService.create(createDelivererDto);

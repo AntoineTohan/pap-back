@@ -8,7 +8,6 @@ import { JwtAuthGuard } from './../auth/guards/jwt-auth.guard';
 export class ProducerController {
   constructor(private readonly producerService: ProducerService) {}
 
-  @UseGuards(JwtAuthGuard)
   @Post()
   async create(@Body() createProducerDto: CreateProducerDto) {
     return await this.producerService.create(createProducerDto);
