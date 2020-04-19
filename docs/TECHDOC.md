@@ -24,10 +24,10 @@ dîte "server-side" se voulant efficiente et scalable.
 
 * L'avantage de choisir un framework écrit en *TypeScript* nous permettra de s'interfacer beaucoup plus simplement avec d'autre framework frontend tel qu'*Angular*. 
 
-* Le second avantage est de tirer partie du langage lui même : en effet, l'utilisation de *TypeScript* nous permet
+* Le second avantage est de tirer partie du langage lui-même : en effet, l'utilisation de *TypeScript* nous permet
 d'assigner un type à nos variables, de déclarer des interfaces, des classes, etc. 
 
-* <a href="http://nestjs.com/" target="blank">NestJS</a> est simple d'utilisation: l'emploie de décorateur permet de rapidement cibler la fonction _CRUD_ associée (_GET/POST/PUT/DELETE_)
+* <a href="http://nestjs.com/" target="blank">NestJS</a> est simple d'utilisation : l'emploi de décorateur permet de rapidement cibler la fonction _CRUD_ associée (_GET/POST/PUT/DELETE_)
 
 ```javascript
 @Get(':id')
