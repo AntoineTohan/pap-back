@@ -37,7 +37,7 @@ et d'entraîde envers les personnes les plus fragiles. Mais également, soutenir
 C'est donc un avantage double : favoriser le recours aux produits locaux et permettre aux personnes les plus fragilisés de bénéficier de légumes frais
 sans pour autant prendre des risques pour leurs santé.
 
-## Utilisation post-Covid19
+## Utilisation post Covid-19
 
 L'utilisation de l'application post-Covid19 pourra être faîtes selon les mêmes critères. 
 Favoriser le recours aux produits locaux et permettre à ce qui n'ont pas forcément les moyens de 
