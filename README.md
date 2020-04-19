@@ -61,7 +61,7 @@ Nous répondrons
 favorablement à toutes demande de suppression des données personnelles conformément aux directives énoncés par la Règlementation Générale sur
 la Protection des Données Personnelles (RGPD).
 
-## Documentations
+## Documentations 
 
 Lien vers la [Documentation technique](../master/docs/TECHDOC.md)
 
